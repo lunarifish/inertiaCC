@@ -41,7 +41,7 @@ static void note_off(uint8_t buf[4], uint8_t note, uint8_t velocity) {
 
 void midiTask(void *pv_arg) {
   while (1) {
-    osDelay(10);
+    osDelay(10 / portTICK_PERIOD_MS);
     // expression cc 11
     midi_tx[3] = abs((roll_deg / 60.f) * 127);
     // modulation cc 1

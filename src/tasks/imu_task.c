@@ -3,7 +3,6 @@
 #include "mpu6050.h"
 
 #include <math.h>
-#include <stdlib.h>
 #include <stdint.h>
 
 #define ACCEL_SCALE 17855.0f  // Scale factor for 16g range
